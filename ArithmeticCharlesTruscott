@@ -98,7 +98,7 @@ class Arithmetic(object):
 #            print(sq, type(sq))
 #            num = int(sq[0:x])
 #            c += num
-        print(lrsb, q, abs(q) - int('9'*(lrsb)))
+#        print(lrsb, q, abs(q) - int('9'*(lrsb)))
         if right_summand < right_summand_two:
             if q < 0:
                 c -= 1
@@ -108,7 +108,7 @@ class Arithmetic(object):
             r = str('{}.{}'.format(c, q))
         else:
             r = str('{}.{}'.format(c, str(abs(q))[0:]))
-        print(r)
+#        print(r)
         return Arithmetic(r)
     def __mul__(self):
         pass
@@ -127,7 +127,19 @@ def CharlesTruscottApproachArithmetic():
 #    for x in range(0, 2):
 #        number_also = number_also + number_also
 #    print(number_also + Arithmetic("3333333333.33333333333333333333"))
-    number = Arithmetic("10.000000")
-    number2 = Arithmetic("3.333333")
-    a = number - number2 - number2 - number2
+    number = Arithmetic("10.0000000000000000000000000000000000000000")
+    number2 = Arithmetic("3.3333333333333333333333333333333333333333")
+    number3 = Arithmetic("6.6060606060606060606060606060606060606060")
+    number4 = (number - number2 - number2 - number2)
+    print("{} - {} - {} - {} = {}".format(number, number2, number2, number2, number4))
+    number5 = number4 + number3
+    print("{} = {} + {}".format(number5, number4, number3))
 if __name__ == "__main__": CharlesTruscottApproachArithmetic()
+
+"""
+
+runfile('/home/charles/Desktop/ArithmeticCharlesTruscott', wdir='/home/charles/Desktop')
+10.0000000000000000000000000000000000000000 - 3.3333333333333333333333333333333333333333 - 3.3333333333333333333333333333333333333333 - 3.3333333333333333333333333333333333333333 = 0.0000000000000000000000000000000000000000
+6.6060606060606060606060606060606060606060 = 0.0000000000000000000000000000000000000000 + 6.6060606060606060606060606060606060606060
+
+"""
